@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Mountain icon - all dark -->
+  <g transform="translate(20, 10) scale(0.85)" fill="#1E293B">
+    <path d="M 95 15 L 15 190 L 95 190 Z" opacity="0.85"/>
+    <path d="M 95 15 L 175 190 L 95 190 Z" opacity="0.65"/>
+    <path d="M 95 15 L 80 55 L 95 44 L 110 55 Z" opacity="0.95"/>
+
+    <path d="M 148 190 L 167 130 L 177 135 L 188 190 Z" opacity="0.35"/>
+    <path d="M 167 130 L 177 135 L 177 190 L 167 190 Z" opacity="0.25"/>
+    <line x1="170" y1="130" x2="170" y2="118" stroke="#1E293B" stroke-width="1.2" opacity="0.5"/>
+    <path d="M 170 118 L 180 122 L 170 126 Z" opacity="0.45"/>
+
+    <path d="M 42 180
+             Q 53 160, 73 158
+             Q 95 156, 87 138
+             Q 79 120, 97 115
+             Q 117 110, 110 92
+             Q 103 74, 115 67
+             Q 123 61, 103 44
+             L 95 32"
+          fill="none" stroke="#1E293B" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+
+    <g opacity="0.3" stroke="#1E293B" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 78 152 L 82 145 L 86 152"/>
+      <path d="M 102 109 L 106 102 L 110 109"/>
+      <path d="M 111 63 L 107 56 L 103 63"/>
+    </g>
+
+    <circle cx="73" cy="158" r="4" fill="#1E293B" opacity="0.8"/>
+    <circle cx="97" cy="115" r="4" fill="#1E293B" opacity="0.8"/>
+    <circle cx="115" cy="67" r="4" fill="#1E293B" opacity="0.8"/>
+
+    <g transform="translate(95, 3)">
+      <path d="M 0,-12 L 2.5,-4 L 12,0 L 2.5,4 L 0,12 L -2.5,4 L -12,0 L -2.5,-4 Z" fill="#1E293B" opacity="0.9"/>
+    </g>
+  </g>
+
+  <text x="220" y="115" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="72" font-weight="800" letter-spacing="-2" fill="#1E293B">SkillTrek</text>
+
+  <rect x="222" y="127" width="370" height="3.5" rx="2" fill="#1E293B" opacity="0.4"/>
+
+  <text x="224" y="155" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="14" font-weight="400" letter-spacing="5" fill="#1E293B" opacity="0.5">
+    AI-POWERED LEARNING
+  </text>
+</svg>

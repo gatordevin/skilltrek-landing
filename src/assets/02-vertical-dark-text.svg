@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="brandPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="mountainLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="mountainRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#3730A3"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="55%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Mountain icon centered -->
+  <g transform="translate(105, 20)">
+    <path d="M 95 25 L 15 195 L 95 195 Z" fill="url(#mountainLeft)"/>
+    <path d="M 95 25 L 175 195 L 95 195 Z" fill="url(#mountainRight)"/>
+    <path d="M 95 25 L 80 65 L 95 54 L 110 65 Z" fill="#E0E7FF" opacity="0.9"/>
+    <path d="M 95 25 L 95 195" stroke="#818CF8" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Secondary peak -->
+    <path d="M 148 195 L 167 135 L 177 140 L 188 195 Z" fill="#4338CA" opacity="0.5"/>
+    <path d="M 167 135 L 177 140 L 177 195 L 167 195 Z" fill="#3730A3" opacity="0.5"/>
+    <line x1="170" y1="135" x2="170" y2="123" stroke="#4338CA" stroke-width="1.2"/>
+    <path d="M 170 123 L 180 127 L 170 131 Z" fill="#F87171" opacity="0.7"/>
+
+    <!-- Trail -->
+    <path d="M 42 185
+             Q 53 165, 73 163
+             Q 95 161, 87 143
+             Q 79 125, 97 120
+             Q 117 115, 110 97
+             Q 103 79, 115 72
+             Q 123 66, 103 49
+             L 95 37"
+          fill="none" stroke="url(#trailGrad)" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+
+    <g opacity="0.35" stroke="#FBBF24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 78 157 L 82 150 L 86 157"/>
+      <path d="M 102 114 L 106 107 L 110 114"/>
+      <path d="M 111 68 L 107 61 L 103 68"/>
+    </g>
+
+    <circle cx="73" cy="163" r="4.5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="97" cy="120" r="4.5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="115" cy="72" r="4.5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="73" cy="163" r="1.8" fill="#fff"/>
+    <circle cx="97" cy="120" r="1.8" fill="#fff"/>
+    <circle cx="115" cy="72" r="1.8" fill="#fff"/>
+
+    <g transform="translate(95, 13)" filter="url(#glow)">
+      <path d="M 0,-14 L 3,-4 L 14,0 L 3,4 L 0,14 L -3,4 L -14,0 L -3,-4 Z" fill="#FBBF24" opacity="0.95"/>
+      <circle cx="0" cy="0" r="4" fill="#FEF3C7"/>
+      <circle cx="0" cy="0" r="10" fill="#FBBF24" opacity="0.2" filter="url(#softGlow)"/>
+    </g>
+  </g>
+
+  <!-- Wordmark centered below -->
+  <text x="200" y="290" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="64" font-weight="800" letter-spacing="-2">
+    <tspan fill="#1E293B">Skill</tspan><tspan fill="url(#brandPrimary)">Trek</tspan>
+  </text>
+
+  <!-- Underline bar centered -->
+  <rect x="68" y="302" width="264" height="3.5" rx="2" fill="url(#barGrad)" opacity="0.85"/>
+
+  <!-- Tagline -->
+  <text x="200" y="330" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="13" font-weight="400" letter-spacing="5" fill="#94A3B8">
+    AI-POWERED LEARNING
+  </text>
+</svg>

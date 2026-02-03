@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" width="500" height="100">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="55%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Light text wordmark for dark backgrounds -->
+  <text x="20" y="55" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="56" font-weight="800" letter-spacing="-2">
+    <tspan fill="#F1F5F9">Skill</tspan><tspan fill="#A78BFA">Trek</tspan>
+  </text>
+  <rect x="22" y="65" width="290" height="3" rx="1.5" fill="url(#barGrad)" opacity="0.85"/>
+  <text x="24" y="85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="11" font-weight="400" letter-spacing="4.5" fill="#94A3B8">
+    AI-POWERED LEARNING
+  </text>
+</svg>

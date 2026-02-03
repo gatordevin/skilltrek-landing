@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { GraduationCap, Twitter, Linkedin, Github, Youtube, ArrowRight, Mail, Send, Check } from 'lucide-react'
+import { Twitter, Linkedin, ArrowRight, Mail, Send, Check } from 'lucide-react'
+import verticalLogoDark from '../assets/02-vertical-dark-text.svg'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -54,36 +55,32 @@ const Footer = () => {
       title: "Product",
       links: [
         { name: "Features", href: "#features" },
+        { name: "For Employers", href: "#for-employers" },
         { name: "How It Works", href: "#how-it-works" },
-        { name: "Gamification", href: "#gamification" },
         { name: "Pricing", href: "#pricing" }
       ]
     },
     {
-      title: "Resources",
+      title: "Company",
       links: [
-        { name: "Help Center", href: "#help" },
-        { name: "FAQ", href: "#faq" },
-        { name: "For Educators", href: "#educators" },
-        { name: "For Parents", href: "#parents" }
+        { name: "About Us", href: "#about" },
+        { name: "Contact", href: "#contact" },
+        { name: "Careers", href: "mailto:careers@skilltrek.io" }
       ]
     },
     {
       title: "Legal",
       links: [
-        { name: "Privacy Policy", href: "#privacy" },
-        { name: "Terms of Service", href: "#terms" },
-        { name: "COPPA Compliance", href: "#coppa" },
-        { name: "Cookie Policy", href: "#cookies" }
+        { name: "Privacy Policy", href: "mailto:legal@skilltrek.io?subject=Privacy%20Policy%20Request" },
+        { name: "Terms of Service", href: "mailto:legal@skilltrek.io?subject=Terms%20of%20Service%20Request" },
+        { name: "Contact Legal", href: "mailto:legal@skilltrek.io" }
       ]
     }
   ]
 
   const socialLinks = [
-    { icon: Twitter, href: "#twitter", label: "Twitter" },
-    { icon: Linkedin, href: "#linkedin", label: "LinkedIn" },
-    { icon: Github, href: "#github", label: "GitHub" },
-    { icon: Youtube, href: "#youtube", label: "YouTube" }
+    { icon: Twitter, href: "https://twitter.com/skilltrek", label: "Twitter" },
+    { icon: Linkedin, href: "https://linkedin.com/company/skilltrek", label: "LinkedIn" }
   ]
 
   return (
@@ -182,11 +179,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand Section */}
           <div className="col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">SkillTrek</span>
+            <div className="mb-6">
+              <img src={verticalLogoDark} alt="SkillTrek" className="h-20" />
             </div>
 
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">

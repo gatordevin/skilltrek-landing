@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="mountainLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="mountainRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#3730A3"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(40, 30)">
+    <!-- Main mountain left face -->
+    <path d="M 110 30 L 20 220 L 110 220 Z" fill="url(#mountainLeft)"/>
+    <!-- Main mountain right face -->
+    <path d="M 110 30 L 200 220 L 110 220 Z" fill="url(#mountainRight)"/>
+    <!-- Snow cap -->
+    <path d="M 110 30 L 93 75 L 110 63 L 127 75 Z" fill="#E0E7FF" opacity="0.9"/>
+    <!-- Ridge -->
+    <path d="M 110 30 L 110 220" stroke="#818CF8" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Secondary peak -->
+    <path d="M 170 220 L 192 155 L 203 160 L 215 220 Z" fill="#4338CA" opacity="0.5"/>
+    <path d="M 192 155 L 203 160 L 203 220 L 192 220 Z" fill="#3730A3" opacity="0.5"/>
+    <line x1="195" y1="155" x2="195" y2="142" stroke="#E0E7FF" stroke-width="1.2"/>
+    <path d="M 195 142 L 206 146 L 195 150 Z" fill="#F87171" opacity="0.7"/>
+
+    <!-- Trail -->
+    <path d="M 50 208
+             Q 62 185, 85 183
+             Q 110 181, 100 160
+             Q 90 140, 112 134
+             Q 134 128, 126 108
+             Q 118 88, 132 80
+             Q 140 74, 118 55
+             L 110 42"
+          fill="none" stroke="url(#trailGrad)" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Chevrons -->
+    <g opacity="0.35" stroke="#FBBF24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 90 177 L 95 169 L 100 177"/>
+      <path d="M 118 128 L 123 120 L 128 128"/>
+      <path d="M 126 76 L 121 68 L 116 76"/>
+    </g>
+
+    <!-- Nodes -->
+    <circle cx="85" cy="183" r="5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="112" cy="134" r="5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="132" cy="80" r="5" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="85" cy="183" r="2" fill="#fff"/>
+    <circle cx="112" cy="134" r="2" fill="#fff"/>
+    <circle cx="132" cy="80" r="2" fill="#fff"/>
+
+    <!-- Summit star -->
+    <g transform="translate(110, 18)" filter="url(#glow)">
+      <path d="M 0,-16 L 3.5,-5 L 16,0 L 3.5,5 L 0,16 L -3.5,5 L -16,0 L -3.5,-5 Z" fill="#FBBF24" opacity="0.95"/>
+      <circle cx="0" cy="0" r="4.5" fill="#FEF3C7"/>
+      <circle cx="0" cy="0" r="11" fill="#FBBF24" opacity="0.2" filter="url(#softGlow)"/>
+    </g>
+  </g>
+</svg>

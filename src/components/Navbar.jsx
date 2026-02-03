@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, GraduationCap, ChevronDown, ExternalLink } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import horizontalLogoDark from '../assets/05-horizontal-dark-bg.svg'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -22,12 +23,6 @@ const Navbar = () => {
     { name: 'Pricing', href: '#pricing' },
   ]
 
-  const resourceItems = [
-    { name: 'Documentation', href: '/docs', external: false },
-    { name: 'Blog', href: '/blog', external: false },
-    { name: 'Help Center', href: '/help', external: false },
-    { name: 'API', href: '/api', external: false },
-  ]
 
   return (
     <motion.nav
@@ -46,12 +41,9 @@ const Navbar = () => {
             href="/"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
-            <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">SkillTrek</span>
+            <img src={horizontalLogoDark} alt="SkillTrek" className="h-10" />
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -67,27 +59,6 @@ const Navbar = () => {
               </motion.a>
             ))}
 
-            {/* Resources Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 px-4 py-2 text-sm font-medium flex items-center space-x-1">
-                <span>Resources</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-dark-900 border border-dark-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-2">
-                  {resourceItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-dark-800 transition-colors"
-                    >
-                      <span>{item.name}</span>
-                      {item.external && <ExternalLink className="w-3 h-3" />}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Desktop CTA */}
@@ -133,20 +104,6 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 ))}
-
-                <div className="border-t border-dark-800 my-4 pt-4">
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">Resources</p>
-                  {resourceItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block text-gray-300 hover:text-white transition-colors duration-200 py-2 text-sm"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
 
                 <div className="border-t border-dark-800 pt-4 space-y-3">
                   <a
