@@ -21,14 +21,14 @@ const Gamification = () => {
   const gamificationFeatures = [
     {
       icon: Trophy,
-      title: "XP & Leveling",
+      title: "Points & Leveling",
       description: "Earn experience points for every completed challenge. Level up to unlock new features and content.",
       color: "yellow"
     },
     {
       icon: Flame,
       title: "Daily Streaks",
-      description: "Maintain your learning streak by studying every day. Longer streaks mean bonus XP and special rewards.",
+      description: "Maintain your learning streak by studying every day. Longer streaks mean bonus points and special rewards.",
       color: "orange"
     },
     {
@@ -128,7 +128,7 @@ const Gamification = () => {
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-white font-medium">Level 12</span>
-                  <span className="text-gray-400 text-sm">2,450 / 3,000 XP</span>
+                  <span className="text-gray-400 text-sm">2,450 / 3,000 points</span>
                 </div>
                 <div className="w-full h-3 bg-dark-800 rounded-full overflow-hidden">
                   <motion.div
@@ -244,29 +244,25 @@ const Gamification = () => {
           </div>
         </motion.div>
 
-        {/* Bottom Stats */}
+        {/* Beta CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="text-center bg-primary-500/10 border border-primary-500/20 rounded-xl p-8"
         >
-          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">100+</p>
-            <p className="text-gray-500 text-sm">Achievements</p>
-          </div>
-          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">500+</p>
-            <p className="text-gray-500 text-sm">Challenges</p>
-          </div>
-          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">50+</p>
-            <p className="text-gray-500 text-sm">Skill Categories</p>
-          </div>
-          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">24/7</p>
-            <p className="text-gray-500 text-sm">AI Availability</p>
-          </div>
+          <h3 className="text-2xl font-bold text-white mb-3">Join the Beta</h3>
+          <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+            Be among the first to experience gamified AI learning. Sign up now and help shape the future of education.
+          </p>
+          <motion.a
+            href="#demo"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-primary-500 hover:to-primary-400 transition-all duration-200"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span>Sign Up for Beta</span>
+          </motion.a>
         </motion.div>
       </div>
     </section>

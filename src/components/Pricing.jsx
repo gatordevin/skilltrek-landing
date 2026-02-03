@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Check, Sparkles, Building2, Users } from 'lucide-react'
@@ -9,57 +9,58 @@ const Pricing = () => {
     triggerOnce: true
   })
 
-  const [isYearly, setIsYearly] = useState(true)
-
   const plans = [
     {
-      name: "Free",
-      description: "Perfect for trying out SkillTrek",
-      price: { monthly: 0, yearly: 0 },
+      name: "Free Trial",
+      description: "Try SkillTrek with no commitment",
+      price: 0,
+      priceLabel: "Free",
       icon: Sparkles,
       features: [
-        "5 challenges per month",
-        "Basic AI tutoring",
+        "3 free learning sessions",
+        "AI-powered tutoring",
+        "Age-adaptive content",
         "Progress tracking",
-        "Community access",
-        "Mobile app access"
+        "Parent dashboard access"
       ],
-      cta: "Get Started Free",
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Pro",
-      description: "For serious learners ready to accelerate",
-      price: { monthly: 19, yearly: 15 },
+      name: "Per-Session",
+      description: "Pay only for what you use",
+      price: 2.99,
+      priceLabel: "$2.99",
+      priceSubtext: "per session",
       icon: Users,
       features: [
-        "Unlimited challenges",
-        "Advanced AI tutoring with Claude",
-        "Detailed analytics & insights",
-        "All achievements & badges",
-        "Priority support",
-        "Custom learning paths",
-        "Certificate of completion"
+        "No subscription required",
+        "Full AI tutoring experience",
+        "All subjects available",
+        "Age-adaptive lesson plans",
+        "Progress analytics",
+        "Parent monitoring tools"
       ],
-      cta: "Start Pro Trial",
+      cta: "Join Beta Waitlist",
       popular: true
     },
     {
-      name: "Team",
-      description: "For organizations and educators",
-      price: { monthly: 49, yearly: 39 },
+      name: "Team / Classroom",
+      description: "Perfect for educators and groups",
+      price: null,
+      priceLabel: "Custom",
+      priceSubtext: "per session, per learner",
       icon: Building2,
       features: [
-        "Everything in Pro",
-        "Up to 50 team members",
-        "Team leaderboards",
-        "Admin dashboard",
-        "Progress reports",
-        "Custom challenges",
-        "SSO integration",
-        "Dedicated support"
+        "Shared classroom sessions",
+        "Multiple learners at once",
+        "Group challenges & activities",
+        "Educator dashboard",
+        "Progress reports for all students",
+        "Bulk session discounts",
+        "Custom curriculum support"
       ],
-      cta: "Contact Sales",
+      cta: "Contact Us",
       popular: false
     }
   ]
@@ -76,33 +77,16 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-primary-400 text-sm font-medium uppercase tracking-wider mb-4">Pricing</p>
+          <p className="text-primary-400 text-sm font-medium uppercase tracking-wider mb-4">Beta Pricing</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-            Simple, Transparent Pricing
+            Simple, Pay-Per-Session Pricing
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            Start free and upgrade as you grow. No hidden fees, cancel anytime.
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-4">
+            No subscriptions or hidden fees. Pay only for the learning sessions you use.
           </p>
-
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4">
-            <span className={`text-sm ${!isYearly ? 'text-white' : 'text-gray-500'}`}>Monthly</span>
-            <button
-              onClick={() => setIsYearly(!isYearly)}
-              className={`relative w-14 h-7 rounded-full transition-colors duration-200 ${
-                isYearly ? 'bg-primary-500' : 'bg-dark-700'
-              }`}
-            >
-              <motion.div
-                className="absolute top-1 w-5 h-5 bg-white rounded-full"
-                animate={{ left: isYearly ? '32px' : '4px' }}
-                transition={{ duration: 0.2 }}
-              />
-            </button>
-            <span className={`text-sm ${isYearly ? 'text-white' : 'text-gray-500'}`}>
-              Yearly <span className="text-accent-400 font-medium">(Save 20%)</span>
-            </span>
-          </div>
+          <p className="text-sm text-accent-400">
+            Beta pricing - sign up now to lock in early adopter rates!
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -124,7 +108,7 @@ const Pricing = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-sm font-semibold px-4 py-1 rounded-full">
-                      Most Popular
+                      Recommended
                     </span>
                   </div>
                 )}
@@ -144,13 +128,12 @@ const Pricing = () => {
                 <div className="text-center mb-8">
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">
-                      ${isYearly ? plan.price.yearly : plan.price.monthly}
+                      {plan.priceLabel}
                     </span>
-                    <span className="text-gray-500 ml-2">/month</span>
                   </div>
-                  {isYearly && plan.price.monthly > 0 && (
+                  {plan.priceSubtext && (
                     <p className="text-gray-500 text-sm mt-1">
-                      Billed annually (${plan.price.yearly * 12}/year)
+                      {plan.priceSubtext}
                     </p>
                   )}
                 </div>
@@ -170,8 +153,9 @@ const Pricing = () => {
                 </ul>
 
                 {/* CTA Button */}
-                <motion.button
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 ${
+                <motion.a
+                  href={plan.name === 'Team / Classroom' ? '#contact' : '#demo'}
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 block text-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white hover:from-primary-500 hover:to-primary-400'
                       : 'bg-dark-800 text-white hover:bg-dark-700'
@@ -180,13 +164,13 @@ const Pricing = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   {plan.cta}
-                </motion.button>
+                </motion.a>
               </motion.div>
             )
           })}
         </div>
 
-        {/* Enterprise Section */}
+        {/* Important Notes */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -195,19 +179,20 @@ const Pricing = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-3">Need a custom solution?</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">Questions about pricing?</h3>
               <p className="text-gray-400 max-w-xl">
-                For large organizations, universities, and enterprises with specific requirements.
-                Get custom pricing, dedicated support, and tailored features.
+                We're happy to help educators, schools, and families find the right plan.
+                Contact us for custom solutions or volume pricing.
               </p>
             </div>
-            <motion.button
+            <motion.a
+              href="#contact"
               className="bg-white text-dark-950 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 whitespace-nowrap"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Contact Sales
-            </motion.button>
+              Contact Us
+            </motion.a>
           </div>
         </motion.div>
       </div>

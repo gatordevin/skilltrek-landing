@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Brain, Target, Trophy, Zap } from 'lucide-react'
+import { Shield, Users, Eye, FileCheck } from 'lucide-react'
 
 const Testimonials = () => {
   const { ref, inView } = useInView({
@@ -9,26 +9,26 @@ const Testimonials = () => {
     triggerOnce: true
   })
 
-  const highlights = [
+  const safetyFeatures = [
     {
-      icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Get personalized explanations and guidance from Claude AI that adapts to your learning style and pace."
+      icon: Shield,
+      title: "COPPA Compliant",
+      description: "Our platform is designed to comply with the Children's Online Privacy Protection Act. We take student privacy seriously."
     },
     {
-      icon: Target,
-      title: "Challenge-Based Approach",
-      description: "Learn through hands-on challenges designed to build real skills progressively."
+      icon: Users,
+      title: "Parent Registration Required",
+      description: "Parents or guardians must register and accept our Terms of Service before students under 18 can use the platform."
     },
     {
-      icon: Trophy,
-      title: "Gamified Experience",
-      description: "Stay motivated with achievements, streaks, and leaderboards that make learning engaging."
+      icon: Eye,
+      title: "Parental Monitoring",
+      description: "Parents can monitor their child's activity, view progress reports, and control account settings at any time."
     },
     {
-      icon: Zap,
-      title: "Instant Feedback",
-      description: "Get immediate responses and corrections to accelerate your learning journey."
+      icon: FileCheck,
+      title: "Age-Appropriate Content",
+      description: "All content is automatically adapted to be age-appropriate based on the learner's profile settings."
     }
   ]
 
@@ -42,39 +42,51 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-primary-400 text-sm font-medium uppercase tracking-wider mb-4">Why SkillTrek</p>
+          <p className="text-accent-400 text-sm font-medium uppercase tracking-wider mb-4">Safety First</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-            A Better Way to Learn
+            Built for Families
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Discover how SkillTrek's AI-powered platform can help you master new skills effectively.
+            We prioritize the safety and privacy of young learners. Parents stay in control.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {highlights.map((highlight, index) => {
-            const Icon = highlight.icon
+          {safetyFeatures.map((feature, index) => {
+            const Icon = feature.icon
             return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-900/50 border border-dark-800 rounded-xl p-8 hover:border-primary-500/20 transition-all duration-300"
+                className="bg-dark-900/50 border border-dark-800 rounded-xl p-8 hover:border-accent-500/20 transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary-400" />
+                  <div className="w-12 h-12 bg-accent-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-accent-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{highlight.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{highlight.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               </motion.div>
             )
           })}
         </div>
+
+        {/* Beta Notice */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-12 bg-primary-500/10 border border-primary-500/20 rounded-xl p-6 text-center"
+        >
+          <p className="text-primary-400 font-medium">
+            Currently in Beta - Sign up to be notified when we launch!
+          </p>
+        </motion.div>
       </div>
     </section>
   )

@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Features', href: '#features' },
+    { name: 'For Employers', href: '#for-employers' },
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Gamification', href: '#gamification' },
     { name: 'Pricing', href: '#pricing' },
@@ -91,19 +92,13 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="/login"
-              className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
-            >
-              Sign In
-            </a>
             <motion.a
               href="#demo"
               className="bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:from-primary-500 hover:to-primary-400 transition-all duration-200"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Start Free Trial
+              Join Beta
             </motion.a>
           </div>
 
@@ -155,17 +150,11 @@ const Navbar = () => {
 
                 <div className="border-t border-dark-800 pt-4 space-y-3">
                   <a
-                    href="/login"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 py-2 text-base font-medium"
-                  >
-                    Sign In
-                  </a>
-                  <a
                     href="#demo"
                     className="block w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-primary-500 hover:to-primary-400 transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Start Free Trial
+                    Join Beta
                   </a>
                 </div>
               </div>

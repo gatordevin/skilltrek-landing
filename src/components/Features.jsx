@@ -21,13 +21,13 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "Claude AI Tutor",
-      description: "Get personalized explanations and guidance from Claude AI. Ask questions anytime and receive context-aware responses that adapt to your learning level."
+      title: "AI Tutor",
+      description: "Get personalized explanations and guidance from AI. Ask questions anytime and receive context-aware responses that adapt to your learning level."
     },
     {
       icon: BookOpen,
-      title: "Structured Challenges",
-      description: "Learn through carefully designed challenges with progressive skill levels. Each challenge builds on previous knowledge for optimal learning."
+      title: "Age-Adaptive Content",
+      description: "Lesson plans automatically adjust to the learner's age, ensuring age-appropriate vocabulary, examples, and complexity levels."
     },
     {
       icon: MessageSquare,
@@ -41,13 +41,13 @@ const Features = () => {
     },
     {
       icon: Users,
-      title: "Collaborative Learning",
-      description: "Join study groups, compete on leaderboards, and learn alongside peers from around the world."
+      title: "Team Mode for Classrooms",
+      description: "Perfect for educators - run classroom sessions with multiple learners and shared challenges in a group setting."
     },
     {
       icon: Lightbulb,
-      title: "Adaptive Curriculum",
-      description: "AI-powered recommendations suggest the perfect next challenge based on your progress and learning goals."
+      title: "Any Subject, Any Goal",
+      description: "From academic subjects to creative skills, languages to coding - our AI creates tailored learning paths for any subject."
     }
   ]
 
@@ -167,23 +167,23 @@ const Features = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Platform Metrics</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Platform Highlights</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-dark-800/50 rounded-xl">
-                  <p className="text-3xl font-bold text-white mb-1">500+</p>
-                  <p className="text-gray-500 text-sm">Learning Challenges</p>
+                  <p className="text-3xl font-bold text-white mb-1">All Ages</p>
+                  <p className="text-gray-500 text-sm">Adaptive Content</p>
                 </div>
                 <div className="text-center p-6 bg-dark-800/50 rounded-xl">
-                  <p className="text-3xl font-bold text-white mb-1">50+</p>
-                  <p className="text-gray-500 text-sm">Skill Categories</p>
+                  <p className="text-3xl font-bold text-white mb-1">Any Subject</p>
+                  <p className="text-gray-500 text-sm">Unlimited Topics</p>
                 </div>
                 <div className="text-center p-6 bg-dark-800/50 rounded-xl">
                   <p className="text-3xl font-bold text-white mb-1">24/7</p>
                   <p className="text-gray-500 text-sm">AI Availability</p>
                 </div>
                 <div className="text-center p-6 bg-dark-800/50 rounded-xl">
-                  <p className="text-3xl font-bold text-white mb-1">100+</p>
-                  <p className="text-gray-500 text-sm">Achievements</p>
+                  <p className="text-3xl font-bold text-white mb-1">COPPA</p>
+                  <p className="text-gray-500 text-sm">Compliant</p>
                 </div>
               </div>
             </div>

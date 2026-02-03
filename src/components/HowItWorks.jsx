@@ -19,26 +19,26 @@ const HowItWorks = () => {
     {
       icon: UserPlus,
       number: "01",
-      title: "Sign Up & Set Goals",
-      description: "Create your account and tell us what you want to learn. Our AI will create a personalized learning path just for you."
+      title: "Parent/Guardian Signup",
+      description: "Parents register and accept Terms of Service. For learners under 18, parents are required to monitor student activity."
     },
     {
       icon: Target,
       number: "02",
-      title: "Choose Challenges",
-      description: "Browse our library of challenges across various subjects. Pick ones that match your skill level and interests."
+      title: "Set Learner Profile",
+      description: "Enter the learner's age and subjects of interest. Our AI tailors content complexity and vocabulary appropriately."
     },
     {
       icon: MessageSquare,
       number: "03",
       title: "Learn with AI Tutor",
-      description: "Work through challenges with Claude AI as your personal tutor. Ask questions, get explanations, and receive instant feedback."
+      description: "Work through challenges with AI as a personal tutor. Ask questions, get explanations, and receive instant feedback."
     },
     {
       icon: Trophy,
       number: "04",
       title: "Earn & Level Up",
-      description: "Complete challenges to earn XP, unlock achievements, maintain streaks, and climb the leaderboards."
+      description: "Complete challenges to earn points, unlock achievements, maintain streaks, and climb the leaderboards."
     }
   ]
 
@@ -123,7 +123,7 @@ const HowItWorks = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span>Start Your Journey</span>
+            <span>Join the Beta</span>
             <ArrowRight className="w-5 h-5" />
           </motion.a>
         </motion.div>

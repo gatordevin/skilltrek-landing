@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import ForEmployers from './components/ForEmployers'
 import HowItWorks from './components/HowItWorks'
 import Gamification from './components/Gamification'
 import Testimonials from './components/Testimonials'
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <ForEmployers />
       <HowItWorks />
       <Gamification />
       <Testimonials />
