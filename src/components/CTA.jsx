@@ -97,20 +97,15 @@ const CTA = () => {
               </div>
             </div>
 
-            {/* Social Proof */}
+            {/* Get Started */}
             <div className="glass-effect rounded-xl p-6">
               <div className="flex items-center space-x-4">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500/50 to-accent-500/50 border-2 border-dark-900"
-                    />
-                  ))}
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-500/50 to-accent-500/50 rounded-lg flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Join 50,000+ learners</p>
-                  <p className="text-gray-500 text-sm">who started this week</p>
+                  <p className="text-white font-medium">Start learning today</p>
+                  <p className="text-gray-500 text-sm">Free plan available</p>
                 </div>
               </div>
             </div>

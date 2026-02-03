@@ -119,7 +119,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Stats */}
+        {/* Platform Highlights */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -127,37 +127,20 @@ const Hero = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-dark-800"
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">50K+</div>
-            <div className="text-gray-500 text-sm uppercase tracking-wider">Active Learners</div>
-          </div>
-          <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
             <div className="text-gray-500 text-sm uppercase tracking-wider">Challenges</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">95%</div>
-            <div className="text-gray-500 text-sm uppercase tracking-wider">Completion Rate</div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+            <div className="text-gray-500 text-sm uppercase tracking-wider">Skill Categories</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">4.9/5</div>
-            <div className="text-gray-500 text-sm uppercase tracking-wider">User Rating</div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-500 text-sm uppercase tracking-wider">AI Availability</div>
           </div>
-        </motion.div>
-
-        {/* Trusted By Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 pt-12 border-t border-dark-800"
-        >
-          <p className="text-gray-500 text-sm uppercase tracking-wider mb-8">Trusted by learners worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 opacity-50">
-            <div className="text-2xl font-bold text-gray-400">Stanford</div>
-            <div className="text-2xl font-bold text-gray-400">MIT</div>
-            <div className="text-2xl font-bold text-gray-400">Google</div>
-            <div className="text-2xl font-bold text-gray-400">Microsoft</div>
-            <div className="text-2xl font-bold text-gray-400">Meta</div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">100+</div>
+            <div className="text-gray-500 text-sm uppercase tracking-wider">Achievements</div>
           </div>
         </motion.div>
       </div>

@@ -252,20 +252,20 @@ const Gamification = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">1M+</p>
-            <p className="text-gray-500 text-sm">XP Earned Daily</p>
-          </div>
-          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
             <p className="text-3xl font-bold text-white mb-1">100+</p>
             <p className="text-gray-500 text-sm">Achievements</p>
           </div>
           <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">365</p>
-            <p className="text-gray-500 text-sm">Max Streak Record</p>
+            <p className="text-3xl font-bold text-white mb-1">500+</p>
+            <p className="text-gray-500 text-sm">Challenges</p>
           </div>
           <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
-            <p className="text-3xl font-bold text-white mb-1">50K+</p>
-            <p className="text-gray-500 text-sm">Active Competitors</p>
+            <p className="text-3xl font-bold text-white mb-1">50+</p>
+            <p className="text-gray-500 text-sm">Skill Categories</p>
+          </div>
+          <div className="text-center p-6 bg-dark-900/50 border border-dark-800 rounded-xl">
+            <p className="text-3xl font-bold text-white mb-1">24/7</p>
+            <p className="text-gray-500 text-sm">AI Availability</p>
           </div>
         </motion.div>
       </div>
